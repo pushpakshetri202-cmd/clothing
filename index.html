@@ -1,1 +1,208 @@
-<H1>Hi from BMC</H1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vibrance Wear</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ff6ec4, #7873f5);
+    color: #333;
+}
+
+/* Header */
+header {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 28px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffe600;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #ffe600;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: #fff;
+}
+
+/* Products */
+.products {
+    padding: 60px 40px;
+    background: #fff;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.products h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.product-card h4 {
+    margin: 15px 0 10px;
+}
+
+.product-card p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-card button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-card button:hover {
+    background: #ffe600;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Vibrance Wear</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Dress Bold. Live Colorful.</h2>
+    <p>Discover trendy, vibrant styles that make you stand out.</p>
+    <button onclick="scrollToShop()">Shop Now</button>
+</section>
+
+<section class="products" id="shop">
+    <h3>Trending Collection</h3>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1520975922215-230cbb171b2d" alt="T-Shirt">
+            <h4>Color Splash Tee</h4>
+            <p>$29.99</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1544441893-675973e31985" alt="Jacket">
+            <h4>Urban Vibe Jacket</h4>
+            <p>$79.99</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" alt="Dress">
+            <h4>Sunset Glow Dress</h4>
+            <p>$59.99</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Vibrance Wear | Stay Stylish ✨
+</footer>
+
+<script>
+function scrollToShop() {
+    document.getElementById("shop").scrollIntoView({ behavior: "smooth" });
+}
+
+function addToCart() {
+    alert("🛍️ Item added to cart!");
+}
+</script>
+
+</body>
+</html>
